@@ -1,11 +1,12 @@
-# IMPLEMENT A RECURSIVE FUNCTION OF CALCULATE THE FACTORIAL OF A GIVEN NUMBER
+def isleapyear(year):
+   if (year % 4==0 and year % 100!=0) or year % 400 ==0:
+    return true
+   else:
+    return false
 
-Def fact_rec(n):
- if n==0 or n==1:
-   return 1
+year = int(input("Enter a year"))
+
+if isleapyear(year):
+    print('{} is a leapyear.'.format(year))
 else:
-   return n*fact_rec(n-1)
-number=4
-rec=fact_rec(number)
-
-print("the factorial of{} is{}.").format(number,rec))
+    print('{} is not a leapyear.'.format(year))
